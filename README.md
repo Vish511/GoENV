@@ -13,5 +13,12 @@ Typically in a production environment, port and all other application critical v
 
 To add a variable to be loaded from environment variables for example, "PORT" add the variable to the 'env' tag. It will load from the environment variable that is specified in the 'env' tag. Specify a default value to be loaded in the 'default' tag.
 
+```sh
+//configfile --> Path to the file
+conf := configfile.GetConfiguration()
+uri := conf.Port
+err := http.ListenAndServe(":"+conf.Port, r)
+```
+
 
 
