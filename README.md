@@ -2,7 +2,7 @@
 > Simple and configurable environment config file that follows DRY principle.
 
 ## Use Case
-Typically in a production environment, port and all other application critical variables are stored in the environment variables to prevent accidental expose to developers. So the default values are mentioned in 'default' tag. Developers will be able to see only this.
+Typically in a production environment, port and all other application critical variables are stored in the environment variables to prevent accidental expose to developers. To load all the environment variables by calling os.getenv will involve repitition of code based on the number of variables. Therefore, this package is much cleaner and generic avoiding repition and also load default values if environment variable is missing.
 
 ## Usage
 
