@@ -14,11 +14,10 @@ const (
 
 type Configuration struct {
 	Port        string `env:"port" default:"3009"`
-	MongoDBURL  string `env:"MongoDBUrl" default:"mongodb://localhost:27017/ekaushalnsdc"`
-	UserService string `env:"UserService" default:"http://localhost:3000/api/user/v1"`
-	AuthService string `env:"AuthService" default:"http://localhost:3001/api/auth"`
+	MongoURL    string `env:"MongoUrl" default:"mongodb://localhost:27017/test"`
+	UserService string `env:"UserService" default:"http://localhost:3005"`
+	AuthService string `env:"AuthService" default:"http://localhost:3050"`
 	Debug       string `env:"Debug" default:"true"`
-	DBNAME      string `env:"DBNAME" default:"ekaushalnsdc"`
 }
 
 /* Non-exported instance to avoid accidental overwrite */
