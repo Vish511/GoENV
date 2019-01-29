@@ -47,8 +47,8 @@ func setConfig() {
 
 func loadFromEnv(tag string, defaultTag string) (string, string) {
 	/* Check if the tag is defined in the environment or else replace with default value */
-	envVar := os.Getenv(tag)
-	if envVar == "" {
+	envVar, isSet := os.LookupEnv(tag)
+	if envVar == "" && !isSet {
 		envVar = defaultTag
 		/* '1' is used to indicate that default value is being loaded */
 		return envVar, "1"
